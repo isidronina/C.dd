@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX 1000
+
 int main() {
-    char nomes[1000][50];
-    int qtds[1000];
+    char nomes[MAX][50];
+    int qtds[MAX];
     int total_produtos = 0, opcao, id, qtd;
     
     do {
         scanf("%d", &opcao);
         
         if (opcao == 1) {
-            if (total_produtos < 1000) {
+            if (total_produtos < MAX) {
                 scanf("%s", nomes[total_produtos]);
                 scanf("%d", &qtds[total_produtos]);
                 total_produtos++;
