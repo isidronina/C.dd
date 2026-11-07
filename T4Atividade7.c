@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+#define MAX_OPERACOES 1000
+
 int main() {
-    float transacoes[1000];
+    float transacoes[MAX_OPERACOES];
     int total_t = 0, i;
     float valor;
     
@@ -14,8 +16,10 @@ int main() {
                 total_t--;
             }
         } else {
-            transacoes[total_t] = valor;
-            total_t++;
+            if (total_t < MAX_OPERACOES) {
+                transacoes[total_t] = valor;
+                total_t++;
+            }
         }
     }
     
