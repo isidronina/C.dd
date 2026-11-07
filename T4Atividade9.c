@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX 100
+
 int main() {
-    char tarefas[100][50];
-    int concluidas[100];
+    char tarefas[MAX][50];
+    int concluidas[MAX];
     int total = 0, opcao, id;
     
     do {
